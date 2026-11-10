@@ -97,12 +97,18 @@ async function apiRequest(url, options = {}) {
 
 function setAuthenticated(user) {
   currentUser = user;
+
+  const composer = document.getElementById("postComposer");
+  if (composer) composer.style.display = "block";
   loginButton.textContent = "My account";
   registerButton.textContent = "Log out";
 }
 
 function setLoggedOut() {
   currentUser = null;
+
+  const composer = document.getElementById("postComposer");
+  if (composer) composer.style.display = "none";
   loginButton.textContent = "Log in";
   registerButton.textContent = "Join now";
 }
