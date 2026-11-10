@@ -647,4 +647,7 @@ postForm.addEventListener("submit", async event => {
     publishPost.textContent = "Publish post";
   }
 });
+
+  // LOAD COMMUNITY FEED WHEN PAGE OPENS
+  loadCommunityFeed();
 }
