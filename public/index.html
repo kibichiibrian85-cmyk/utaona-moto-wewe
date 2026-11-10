@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1746a2">
+  <meta name="description" content="UTAONA MOTO WEWE - Discover creators, share moments and connect with people.">
+  <title>UTAONA MOTO WEWE | Social Community</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="/">
+    <img src="/images/cap.jpg" alt="UTAONA MOTO WEWE cap" onerror="this.style.display='none'">
+    <span>UTAONA <b>MOTO WEWE</b></span>
+  </a>
+  <button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button>
+  <nav id="navigation">
+    <a class="active" href="#home">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="header-actions">
+    <button class="outline-button" id="loginOpen">Log in</button>
+    <button class="primary-button" id="registerOpen">Join now</button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">WELCOME TO OUR COMMUNITY</span>
+      <h1>Your people.<br><span>Your moments.</span><br>Your platform.</h1>
+      <p>Discover amazing creators, share your photos and videos, follow friends and let the world see your moments.</p>
+      <div class="hero-actions">
+        <button class="primary-button large" id="heroJoin">Create an account</button>
+        <a class="outline-button large" href="#explore">Explore community</a>
+      </div>
+      <div class="hero-note">♥ A place to connect, create and shine.</div>
+    </div>
+    <div class="hero-art">
+      <div class="art-card card-one">
+        <span>✨</span>
+        <strong>CREATE</strong>
+        <small>Share your talent</small>
+      </div>
+      <div class="art-card card-two">
+        <span>💙</span>
+        <strong>CONNECT</strong>
+        <small>Meet your people</small>
+      </div>
+      <div class="art-circle">UMW</div>
+    </div>
+  </section>
+
+  <section class="quick-links" id="explore">
+    <a href="#feed"><span>▣</span> Community posts</a>
+    <a href="#videos"><span>▶</span> Videos</a>
+    <a href="#about"><span>♡</span> Our community</a>
+  </section>
+
+<section class="section" id="feed">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">THE COMMUNITY</span>
+      <h2>Discover what's happening</h2>
+      <p>Share your thoughts and connect with the community.</p>
+    </div>
+    <button class="primary-button" id="feedJoin">Join the community</button>
+  </div>
+
+  <div class="post-composer" id="postComposer">
+    <h3>What's on your mind?</h3>
+    <form id="postForm">
+      <textarea
+        id="postContent"
+        maxlength="2000"
+        placeholder="Share something with the community..."
+        required
+      ></textarea>
+      <div class="media-upload-area">
+  <label for="postMedia" class="outline-button">
+    📷 Add photo or video
+  </label>
+
+  <input
+    type="file"
+    id="postMedia"
+    accept="image/jpeg,image/png,image/webp,video/mp4,video/webm"
+    hidden
+  >
+
+  <p class="media-help">
+    Photos up to 8 MB · Videos up to 50 MB
+  </p>
+
+  <div id="mediaPreview" class="media-preview"></div>
+</div>
+<div class="composer-footer">
+        <span id="characterCount">0 / 2000</span>
+        <button class="primary-button" type="submit" id="publishPost">
+          Publish post
+        </button>
+      </div>
+      <p id="postMessage" role="status"></p>
+    </form>
+  </div>
+
+  <div class="feed-toolbar">
+    <h3>Community feed</h3>
+    <button class="outline-button" id="refreshFeed">Refresh</button>
+  </div>
+
+  <div id="communityFeed" class="community-feed">
+    <p>Loading community posts...</p>
+  </div>
+</section>
+  <section class="creator-section" id="about">
+    <div class="creator-photo">
+      <img src="/images/daisy.jpg" alt="Daisy Jerotich, official administrator">
+    </div>
+    <div class="creator-info">
+      <span class="eyebrow">MEET THE ADMINISTRATOR</span>
+      <h2>Daisy Jerotich</h2>
+      <span class="admin-label">✓ Official Administrator</span>
+      <p>Welcome to UTAONA MOTO WEWE. A community for sharing creativity, discovering talent and connecting with people.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/becky.mswahili.1" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.youtube.com/@jerotichtanui" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@jerotich.tanui" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://wa.me/254705494567" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-banner" id="videos">
+    <span class="eyebrow">YOUR VOICE MATTERS</span>
+    <h2>Ready to share your world?</h2>
+    <p>Join UTAONA MOTO WEWE and become part of the community.</p>
+    <button class="light-button" id="bottomJoin">Join UTAONA MOTO WEWE</button>
+  </section>
+</main>
+
+<footer>
+  <a class="footer-brand" href="/">UTAONA MOTO WEWE</a>
+  <p>Connect. Create. Share. Shine.</p>
+  <small>© <span id="year"></span> UTAONA MOTO WEWE. All rights reserved.</small>
+</footer>
+
+<div class="modal" id="authModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="close-modal" id="closeModal" aria-label="Close">×</button>
+    <div class="modal-logo">UMW</div>
+    <h2 id="modalTitle">Join our community</h2>
+    <p id="modalDescription">Create your account and start sharing.</p>
+
+    <form id="authForm">
+      <div id="nameField">
+        <label for="fullName">Full name</label>
+        <input id="fullName" name="fullName" placeholder="Your full name" autocomplete="name">
+      </div>
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      <div id="usernameField">
+  <label for="username">Choose a username</label>
+  <input id="username" name="username" type="text"
+    placeholder="e.g. brian_kenei"
+    minlength="3" maxlength="30"
+    autocomplete="username">
+</div>
+<label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required>
+      <button class="primary-button full-button" type="submit" id="authSubmit">Create account</button>
+      <p class="form-message" id="formMessage" role="status"></p>
+    </form>
+    <button class="switch-auth" id="switchAuth">Already have an account? Log in</button>
+    <small class="demo-note">Your account details are protected. Never share your password.</small>
+  </div>
+</div>
+
+</body>
+</html>

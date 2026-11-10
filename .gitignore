@@ -1,0 +1,15 @@
+node_modules/
+.env
+uploads/*
+!uploads/.gitkeep
+data/*
+!data/.gitkeep
+.DS_Store
+
+# Private environment files
+.env*
+!.env.example
+
+# Local logs and backups
+*.log
+server.js.before-auth
