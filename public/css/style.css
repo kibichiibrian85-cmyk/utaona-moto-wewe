@@ -544,3 +544,29 @@ footer small { font-size: 11px; color: #a9bddf; }
   margin: 12px 0;
   background: #111;
 }
+
+/* ENSURE PHOTO AND VIDEO BUTTON IS VISIBLE */
+.media-upload-area {
+  display: block !important;
+  visibility: visible !important;
+  margin: 18px 0 !important;
+}
+
+.media-upload-area label[for="postMedia"] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 20px !important;
+  background: #174a9c !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.media-help {
+  display: block !important;
+  visibility: visible !important;
+  color: #64748b;
+}
